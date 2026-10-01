@@ -67,7 +67,7 @@ h1 { margin: 0 0 18px; font-size: clamp(40px, 6.5vw, 58px); font-weight: 700; li
 .hero-links a:hover { color: var(--accent-ink); border-color: var(--accent); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .hero-photo { margin: 0; }
-.hero-photo img { width: 100%; aspect-ratio: 1 / 1.08; object-fit: cover; border-radius: 16px; border: 1px solid var(--line); background: var(--surface); }
+.hero-photo img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 28%; border-radius: 16px; border: 1px solid var(--line); background: var(--surface); }
 
 /* ---------- buttons ---------- */
 .btn { display: inline-flex; align-items: center; min-height: 42px; padding: 0 16px; border: 1px solid var(--line); border-radius: 8px; font-size: 13px; font-weight: 600; transition: border-color .18s, color .18s, transform .18s; }
@@ -85,11 +85,9 @@ h1 { margin: 0 0 18px; font-size: clamp(40px, 6.5vw, 58px); font-weight: 700; li
 .sec-side:hover { color: var(--accent-ink); }
 
 /* about */
-.about-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 44px; align-items: start; }
+.about-grid { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: start; }
 .about-text p { margin: 0 0 16px; color: var(--muted); font-size: 14.5px; line-height: 1.75; }
 .about-text p:first-child { color: var(--ink); font-size: 16px; }
-.about-photo { margin: 0; }
-.about-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); }
 .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; margin: 44px 0 0; }
 .facts > div { display: grid; grid-template-columns: 64px 1fr; gap: 14px; padding: 13px 0; border-top: 1px solid var(--line); }
 .facts dt { color: var(--accent-ink); font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
@@ -154,7 +152,6 @@ h1 { margin: 0 0 18px; font-size: clamp(40px, 6.5vw, 58px); font-weight: 700; li
   .hero-photo { order: -1; max-width: 320px; }
   .hero-photo img { aspect-ratio: 1 / 1; }
   .about-grid { grid-template-columns: 1fr; gap: 28px; }
-  .about-photo { max-width: 440px; }
   .facts { grid-template-columns: 1fr; margin-top: 32px; }
   .row-def { grid-template-columns: 1fr; gap: 4px; }
   .row-pub { grid-template-columns: 1fr; gap: 4px; }

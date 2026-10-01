@@ -23,10 +23,9 @@ assets/documents/     downloadable Academic / Business CV PDFs
 
 Real photos live in `assets/images/`:
 
-- `Hamed_CV_photo.jpg` — hero portrait (from the CV)
-- `Hamed_CV_source_profile.jpg` — About section photo
+- `Hamed_portrait.jpg` — hero portrait, with the original red backdrop recolored to warm ivory (`Hamed_CV_source_profile.jpg` was the source)
 
-Portrait-style photos work best in the hero; 4:3 or wider in About.
+Replace `Hamed_portrait.jpg` to update the main photo.
 
 ## Content sources
 

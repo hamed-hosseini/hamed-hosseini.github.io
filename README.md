@@ -23,9 +23,9 @@ assets/documents/     downloadable Academic / Business CV PDFs
 
 Real photos live in `assets/images/`:
 
-- `Hamed_portrait.jpg` — hero portrait, with the original red backdrop recolored to warm ivory (`Hamed_CV_source_profile.jpg` was the source)
+- `Hamed_CV_source_profile.jpg` — main portrait (original photo, red backdrop kept)
 
-Replace `Hamed_portrait.jpg` to update the main photo.
+Replace `Hamed_CV_source_profile.jpg` to update the main photo.
 
 ## Content sources
 

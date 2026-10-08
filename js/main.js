@@ -72,3 +72,17 @@ if ('IntersectionObserver' in window) {
 }
 
 document.querySelector('#year').textContent = String(new Date().getFullYear());
+
+document.querySelectorAll('.video-embed').forEach((embed) => {
+  const play = embed.querySelector('.video-play');
+  if (!play) return;
+  play.addEventListener('click', () => {
+    const frame = document.createElement('iframe');
+    frame.className = 'video-frame';
+    frame.src = `https://www.youtube-nocookie.com/embed/${embed.dataset.video}?autoplay=1&rel=0`;
+    frame.title = embed.dataset.title || 'Paper video';
+    frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    frame.setAttribute('allowfullscreen', '');
+    embed.replaceChildren(frame);
+  });
+});

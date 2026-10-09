@@ -130,8 +130,13 @@ h1 { margin: 0 0 18px; font-size: clamp(40px, 6.5vw, 58px); font-weight: 700; li
 .row-exp h3 { margin: 0; font-size: 14.5px; font-weight: 600; letter-spacing: -.01em; }
 .row-exp h3 a { color: var(--accent-ink); font-weight: 500; }
 .row-exp p { margin: 4px 0 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
-.workshops { margin: 26px 0 0; color: var(--muted); font-size: 12.5px; line-height: 1.7; }
-.workshops strong { color: var(--ink); font-weight: 600; }
+.row-ws { display: grid; grid-template-columns: 92px 1fr 200px; gap: 18px; align-items: start; }
+.row-ws h3 { margin: 0; font-size: 14.5px; font-weight: 600; letter-spacing: -.01em; }
+.row-ws p { margin: 4px 0 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.row-ws p a { color: var(--accent-ink); font: 500 11px var(--mono); border-bottom: 1px solid var(--line); }
+.row-ws p a:hover { border-color: var(--accent); }
+.ws-photo { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.ws-photo img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
 
 /* cv + contact */
 .cv-links { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -168,6 +173,8 @@ h1 { margin: 0 0 18px; font-size: clamp(40px, 6.5vw, 58px); font-weight: 700; li
   .row-def { grid-template-columns: 1fr; gap: 4px; }
   .row-pub { grid-template-columns: 1fr; gap: 4px; }
   .row-exp { grid-template-columns: 1fr; gap: 4px; }
+  .row-ws { grid-template-columns: 1fr; gap: 4px; }
+  .ws-photo { max-width: 480px; margin-top: 10px; }
   .section { padding-block: 58px; }
   .sec-head { margin-bottom: 30px; }
 }

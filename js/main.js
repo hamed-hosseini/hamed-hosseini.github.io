@@ -3,18 +3,11 @@ const themeToggle = document.querySelector('.theme-toggle');
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
 
-/* pinned announcement bar */
+/* pinned announcement bar (always visible, not dismissible) */
 const announce = document.querySelector('#announce');
-let announceDismissed = false;
-try { announceDismissed = localStorage.getItem('sh-announce-dismissed') === '1'; } catch {}
-if (announce && !announceDismissed) {
+if (announce) {
   announce.hidden = false;
   root.classList.add('has-announce');
-  announce.querySelector('.announce-close').addEventListener('click', () => {
-    announce.hidden = true;
-    root.classList.remove('has-announce');
-    try { localStorage.setItem('sh-announce-dismissed', '1'); } catch {}
-  });
 }
 
 try {

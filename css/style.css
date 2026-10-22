@@ -26,6 +26,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+html.has-announce { scroll-padding-top: 128px; }
 body {
   margin: 0;
   background: var(--bg);
@@ -114,16 +115,18 @@ h1 { margin: 0 0 18px; font-size: clamp(40px, 6.5vw, 58px); font-weight: 700; li
 .row-pub p a { color: var(--accent-ink); font: 500 11px var(--mono); border-bottom: 1px solid var(--line); }
 .row-pub p a:hover { border-color: var(--accent); }
 
-/* featured announcements */
-.row-news { display: grid; grid-template-columns: 56px 1fr; gap: 18px; background: color-mix(in srgb, var(--accent) 9%, var(--surface)); }
-.row-news:first-child { border-top: 2px solid var(--accent); }
-.row-news h3 { margin: 0; font-size: 14.5px; font-weight: 600; line-height: 1.45; letter-spacing: -.01em; }
-.row-news h3 a { color: var(--ink); }
-.row-news h3 a:hover { color: var(--accent-ink); }
-.row-news p { margin: 4px 0 0; color: var(--muted); font-size: 12.5px; line-height: 1.55; }
-.row-news p strong { color: var(--ink); font-weight: 600; }
-.row-news p a { color: var(--accent-ink); font: 500 11px var(--mono); border-bottom: 1px solid var(--line); }
-.row-news p a:hover { border-color: var(--accent); }
+/* pinned announcement bar (top of page layer, inside sticky header) */
+.announce-bar { border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--accent) 14%, var(--surface)); }
+.announce-inner { display: flex; align-items: center; gap: 14px; padding: 10px 0; }
+.announce-inner p { flex: 1; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 0; font-size: 13px; line-height: 1.5; color: var(--muted); }
+.announce-inner strong { color: var(--ink); font-weight: 600; }
+.announce-inner a { color: var(--accent-ink); font-weight: 500; border-bottom: 1px solid var(--line); }
+.announce-inner a:hover { border-color: var(--accent); }
+.i-announce { width: 16px; height: 16px; flex: none; fill: none; stroke: var(--accent-ink); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.announce-close { display: grid; place-items: center; width: 28px; height: 28px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: none; color: var(--muted); cursor: pointer; transition: color .18s, border-color .18s; }
+.announce-close:hover { color: var(--ink); border-color: var(--accent); }
+.announce-close svg { width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+@media (max-width: 640px) { .announce-inner p { font-size: 12px; } .announce-inner { gap: 10px; } }
 
 /* paper videos */
 .video-embed { position: relative; max-width: 520px; margin: 14px 0 4px; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--line); border-radius: 10px; background: var(--ink); }

@@ -3,6 +3,20 @@ const themeToggle = document.querySelector('.theme-toggle');
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
 
+/* pinned announcement bar */
+const announce = document.querySelector('#announce');
+let announceDismissed = false;
+try { announceDismissed = localStorage.getItem('sh-announce-dismissed') === '1'; } catch {}
+if (announce && !announceDismissed) {
+  announce.hidden = false;
+  root.classList.add('has-announce');
+  announce.querySelector('.announce-close').addEventListener('click', () => {
+    announce.hidden = true;
+    root.classList.remove('has-announce');
+    try { localStorage.setItem('sh-announce-dismissed', '1'); } catch {}
+  });
+}
+
 try {
   const saved = localStorage.getItem('sh-theme');
   if (saved === 'dark' || saved === 'light') root.dataset.theme = saved;

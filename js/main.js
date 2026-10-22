@@ -8,6 +8,11 @@ const announce = document.querySelector('#announce');
 if (announce) {
   announce.hidden = false;
   root.classList.add('has-announce');
+  const setAnnounceHeight = () => root.style.setProperty('--announce-h', announce.offsetHeight + 'px');
+  setAnnounceHeight();
+  window.addEventListener('resize', setAnnounceHeight);
+  window.addEventListener('load', setAnnounceHeight);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(setAnnounceHeight);
 }
 
 try {
